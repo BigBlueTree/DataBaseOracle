@@ -1,0 +1,33 @@
+cmd
+show user > user 정보가 나옴
+sqlplus ID/password
+oracle scott 계정 생성
+select*from emp; -> table or view does not exist
+C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN\scott.sql 파일 확인
+conn ID/password
+@C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql > @치고 scott파일 드래그 해도 됨
+select*from emp; -> 표 같은 내용이 나옴
+
+sql developer down
+두번째 32/64 down > 파일용량이 큼
+다운로드에 말고 적절한 경로에 압축풀기
+
+oracle hr 계정 생성
+
+1.sqlplus system/비번
+2.alter user hr account unlock; > hr 해제
+3.alter user hr identified by hr; > 비번을 hr로
+4.conn hr/hr
+
+sql developer
+
+왼쪽 위 초록 십자가
+Name : HR
+사용자 이름 hr,비밀번호 hr ,비밀번호 저장 체크
+테스트 눌러보고 왼쪽 아래 성공 확인
+
+D: sqlstudy 폴더 만들기
+새로 만들기에 경로 sqlstudy로 지정
+basic 제목
+select*from employees; 저장 후 경로에 파일 만들어 졌는지 확인
+
