@@ -1,0 +1,36 @@
+create table member(
+    id varchar2(10) primary key,
+    pw varchar2(10) not null,
+    name varchar2(30) not null,
+    regdate date default sysdate not null
+);
+
+CREATE TABLE board (
+  num NUMBER PRIMARY KEY,
+  title VARCHAR2(200) NOT NULL,
+  content VARCHAR2(2000) NOT NULL,
+  id VARCHAR2(10) NOT NULL,
+  postdate DATE DEFAULT SYSDATE NOT NULL,
+  visitcount NUMBER(6),
+  CONSTRAINT board_num_fk FOREIGN KEY(id) REFERENCES member(id)
+);
+
+create sequence seq_board_num
+  start with 1
+  increment by 1
+  minvalue 1
+  nomaxvalue
+  nocycle
+  nocache;
+  
+insert into member(id, pw, name)
+values ('admin', '1234', '관리자');
+
+delete from board;
+
+insert into board(num,title,content,id,visitcount)
+values(seq_board_num.nextval,'제목','내용','admin',0);
+commit;
+
+
+
